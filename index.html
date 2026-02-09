@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Valentine Date Proposal 💖</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+</head>
+<body>
+
+<!-- PASSWORD SCREEN -->
+<div id="lock-screen" class="center">
+  <h1>🔒 Secret Page</h1>
+  <p class="hint">💡 Hint: Our Anniversary 💕</p>
+  <input type="date" id="password" />
+  <button onclick="unlock()">Enter 💖</button>
+  <p id="lock-msg"></p>
+</div>
+
+<!-- MAIN CONTENT -->
+<div id="main" class="hidden">
+  <button id="music-btn" onclick="playMusic()">🎶 Play our song</button>
+
+  <audio id="bg-music" loop>
+    <source src="music.mp3" type="audio/mpeg">
+  </audio>
+
+  <div class="card">
+    <h1>💖Will You Be My Valentine?</h1>
+    <p>I made this just for you 😘</p>
+
+    <h2>🌹 Our Valentine’s Day Plan 🌹</h2>
+
+    <div class="plan-row">
+
+      <!-- Diamonds -->
+      <div class="activity">
+        <img src="diamond.jpg" alt="Diamond Shopping">
+        <div class="activity-text">
+          <p>💎 Shop around diamond markets (1–4pm)</p>
+          <ol class="diamond-list">
+            <li><a href="https://www.miuz.mn/" target="_blank">MIUZ</a></li>
+            <li><a href="https://www.damiani.com/" target="_blank">Damiani</a></li>
+            <li><a href="https://cy.epldiamond.com/" target="_blank">EPL</a></li>
+          </ol>
+        </div>
+      </div>
+
+      <!-- Dinner -->
+      <div class="activity">
+        <img src="dinner.jpg" alt="Dinner">
+        <div class="activity-text">
+          <p>🍽️ Dinner at 5pm at UI Lounge</p>
+          <a href="https://maps.app.goo.gl/pzRhZydasvmtzLGn9" target="_blank">📍 View Location</a>
+          <br><br>
+          <button class="menu-btn" onclick="openMenu()">📖 View Menu</button>
+        </div>
+      </div>
+
+      <!-- Movie -->
+      <div class="activity">
+        <img src="cinema.jpg" alt="Movie Night">
+        <div class="activity-text">
+          <p>🎬 Cinema time & memories</p>
+          <p>WHISTLE</p>
+          <a href="https://www.youtube.com/watch?v=qDXMTEUBfp0" target="_blank">
+            🎞️ Watch Trailer
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <textarea id="comment" placeholder="Leave me your thoughts..."></textarea>
+
+    <div class="buttons">
+      <button class="yes" onclick="sayYes()">Yes 💖</button>
+      <button class="no" id="no-btn">No 😢</button>
+    </div>
+
+    <p id="status"></p>
+  </div>
+</div>
+
+<!-- YES SCREEN -->
+<div id="yes-screen" class="center hidden">
+  <h1>🎉 YAYYYYY!!! 🎉</h1>
+  <p>It’s a date 💕 I can’t wait 🥰</p>
+</div>
+
+<!-- MENU MODAL -->
+<div id="menu-modal" class="menu-modal hidden">
+  <div class="menu-content">
+    <button class="close-btn" onclick="closeMenu()">✖</button>
+    <img src="menu.jpg" alt="Restaurant Menu">
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
